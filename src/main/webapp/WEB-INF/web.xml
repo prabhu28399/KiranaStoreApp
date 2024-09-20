@@ -21,32 +21,32 @@
   <!-- Servlet Mappings -->
 
   <!-- LoginServlet mapping -->
-  <servlet>
+ <!--  <servlet>
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>servlets.LoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>
     <url-pattern>/login</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
 
   <!-- Admin Dashboard Servlet -->
-  <servlet>
+ <!--  <servlet>
     <servlet-name>AdminDashboardServlet</servlet-name>
     <servlet-class>servlets.AdminDashboardServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>AdminDashboardServlet</servlet-name>
     <url-pattern>/adminDashboard</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
 
   <!-- Logout Servlet -->
-  <servlet>
+  <!-- <servlet>
     <servlet-name>LogoutServlet</servlet-name>
     <servlet-class>servlets.LogoutServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>LogoutServlet</servlet-name>
     <url-pattern>/logout</url-pattern>
-  </servlet-mapping>
+  </servlet-mapping> -->
 </web-app>
