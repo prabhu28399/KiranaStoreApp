@@ -1,1 +1,267 @@
 @charset "UTF-8";
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4; /* Dark background */
+}
+
+
+
+
+/*footer section*/
+
+
+
+
+
+footer {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 40px 0;
+    width: 100%;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 50px;
+    text-align: left;
+}
+
+.footer-container h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-container ul {
+    list-style-type: none;
+    padding: 0; /* Remove default padding */
+}
+
+.footer-container ul li {
+    margin-bottom: 10px;
+}
+
+.footer-container ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.footer-container ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icons {
+    padding-left: 0;
+}
+
+.social-icons li {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons li a {
+    font-size: 18px;
+}
+
+.social-icons i {
+    margin-right: 10px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    max-width: 120px; /* Adjust the size of the logo */
+}
+
+.footer-bottom {
+    background-color: #0056b3;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-container div {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navbar  image */
+.navbar{
+    background-color: white;
+    color: black;
+}
+
+#navbarNav{
+	background-color: black	;
+	color: white;
+}
+
+
+
+
+.profile-img {
+    width:40px; /* Adjust the size of the image */
+    height: 40px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    object-fit: cover;
+    
+}
+
+
+.profile-img:hover {
+    border-color: #007bff;
+}
+
+/* Dropdown Menu Style */
+.dropdown-menu {
+    background-color: #343a40;
+    border: none;
+    min-width: 160px;
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu .dropdown-item {
+    color: #fff;
+    padding: 10px 15px;
+}
+
+/* Hover Effect for Dropdown Menu Items */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Custom hover behavior for dropdown */
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .profile-img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+
+/* user login card's */
+ .product-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* Adjust the gap between rows */
+        padding:20px;
+        align-items: center;
+    }
+
+    .product-row {
+        display: flex;
+        justify-content: space-around; /* Adjust alignment */
+    }
+
+    .product-card {
+    display: flex;
+    flex-direction: column; 
+    margin: 0 10px; 
+    width: 300px; 
+    height:240;
+    overflow: hidden; 
+    text-align: center;
+    border-radius:10px; 
+    background-color:#fff;
+    border:1px solid #ccc;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position:relative;
+}
+
+
+.product-card:hover {
+    transform: translateY(-5px) scale(1.05); /* Lift the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+
+
+   .product-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1); /* Overlay color */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    border-radius: 10px; /* Match card's border radius */
+}
+
+.product-card:hover::before {
+    opacity: 1; /* Show overlay on hover */
+}
+
+img {
+    max-width: 100%; 
+    border-radius: 10px 10px 0 0; /* Rounded top corners for images */
+    margin-bottom: 10px; /* Space between image and text */
+}
+
+
+
+
