@@ -10,6 +10,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 @WebServlet("/adminLogin")
 public class AdminLoginServlet extends HttpServlet {
@@ -32,8 +33,16 @@ public class AdminLoginServlet extends HttpServlet {
                 ResultSet resultSet = preparedStatement.executeQuery();
                 
                 if (resultSet.next()) {
-                    // Login successful, redirect to admin dashboard
-                    response.sendRedirect("adminDashboard");
+                    // Login successful
+                    // Get the username from the result set
+                    String adminUsername = resultSet.getString("uname");
+
+                    // Set the username in session
+                    HttpSession session = request.getSession();
+                    session.setAttribute("username", adminUsername);
+                    
+                    // Redirect to admin dashboard
+                    response.sendRedirect("admin_dashboard.jsp");
                 } else {
                     // Login failed, set error message and redirect back to login
                     request.setAttribute("message", "Invalid credentials. Please try again.");

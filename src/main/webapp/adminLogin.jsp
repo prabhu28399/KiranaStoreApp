@@ -21,10 +21,10 @@
 
     <form action="adminLogin" method="post">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
+        <input type="text" id="username" name="username" required autocomplete="off"><br>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
+        <input type="password" id="password" name="password" required autocomplete="off"><br>
 
         <input type="submit" value="Login">
     </form>

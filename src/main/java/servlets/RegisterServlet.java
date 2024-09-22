@@ -10,7 +10,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -26,7 +25,8 @@ public class RegisterServlet extends HttpServlet {
         String jdbcUsername = "root";
         String jdbcPassword = "root";
         
-        String insertUserSQL = "INSERT INTO users (uname, uemail, upwd, umobile) VALUES (?, ?, ?, ?)";
+        // Insert statement with role set to 'user'
+        String insertUserSQL = "INSERT INTO users (uname, uemail, upwd, umobile, role) VALUES (?, ?, ?, ?, 'user')";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -36,6 +36,7 @@ public class RegisterServlet extends HttpServlet {
             preparedStatement.setString(2, uemail);
             preparedStatement.setString(3, upwd);
             preparedStatement.setString(4, umobile);
+
             int result = preparedStatement.executeUpdate();
 
             if (result > 0) {
